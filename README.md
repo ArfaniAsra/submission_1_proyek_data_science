@@ -31,54 +31,33 @@ Proyek ini mencakup:
    - Visualisasi tren dan pola attrition di berbagai departemen, level pekerjaan, dan usia karyawan.
 4. **Pembuatan Business Dashboard**: Visualisasi data dalam bentuk dashboard yang mudah dipahami untuk memantau faktor penyebab attrition.
 5. **Kesimpulan dan Rekomendasi**: Menarik kesimpulan dari hasil analisis dan memberikan rekomendasi praktis untuk mengurangi attrition.
-
-### Persiapan
-- **Sumber Data**: Dataset `employee_data.csv` yang berisi informasi demografis, metrik kerja, dan flag attrition.
-- **Setup Environment**:
-```bash
-pip install pandas numpy matplotlib seaborn
-```
-
----
-
-## Langkah Awal Eksplorasi Data
-
-Kode berikut digunakan untuk memuat dataset, melihat ringkasan, dan melakukan eksplorasi awal:
-
-```python
-# Import library
-import pandas as pd
-import numpy as np
-
-# Load dataset
-df = pd.read_csv('employee_data.csv')
-
-# Menampilkan ringkasan data
-print("Informasi Dataset:")
-print(df.info())
-
-# Menampilkan preview data
-print("\nPreview Data:")
-print(df.head())
-
-# Mengecek missing values
-print("\nMissing Values:")
-print(df.isnull().sum())
-
-# Mengecek duplikat data
-print("\nJumlah Duplikat:", df.duplicated().sum())
-```
-
 ---
 
 ## Business Dashboard
-Jelaskan tentang business dashboard yang telah dibuat. Jika ada, sertakan juga link untuk mengakses dashboard tersebut.
+Hasil dari analisis dan model prediktif dapat divisualisasikan dalam bentuk dashboard untuk membantu tim HR memantau dan memahami attrition secara real-time. Berikut adalah elemen-elemen yang dapat disertakan dalam dashboard:
+1. **Tren Attrition**:
+   - Distribusi attrition berdasarkan fitur seperti **OverTime**, **MonthlyIncome**, dan **YearsAtCompany**.
+2. **Feature Importance**:
+   - Visualisasi kontribusi fitur utama seperti **OverTime_Yes** dan **MonthlyIncome** terhadap risiko attrition.
+3. **Prediksi Risiko**:
+   - Menampilkan daftar karyawan dengan risiko tinggi berdasarkan hasil prediksi model XGBoost.
 
 ## Conclusion
-Jelaskan konklusi dari proyek yang dikerjakan.
+Proyek ini berhasil mencapai tujuan utama yaitu:
+1. **Mengidentifikasi faktor utama penyebab attrition**:
+   - Faktor terpenting adalah lembur berlebihan (**OverTime**), pendapatan rendah (**MonthlyIncome**), dan masa kerja pendek.
+2. **Membangun model prediktif yang akurat**:
+   - Model XGBoost memberikan performa terbaik dengan **accuracy 84.94%** dan metrik lainnya yang tinggi.
+3. **Memberikan rekomendasi actionable**:
+   - Tim HR dapat mengimplementasikan kebijakan untuk mengurangi lembur, menyesuaikan skala gaji, dan memperkuat retensi karyawan baru.
 
-### Rekomendasi Action Items (Optional)
+### Rekomendasi Action Items untuk Perusahaan
 Berikan beberapa rekomendasi action items yang harus dilakukan perusahaan guna menyelesaikan permasalahan atau mencapai target mereka.
-
-- action item 1
-- action item 2
+1. **Kurangi Lembur Berlebihan**:
+   - Berikan program kerja fleksibel untuk meningkatkan keseimbangan kerja-hidup.
+2. **Kaji Skala Gaji**:
+   - Sesuaikan gaji karyawan agar kompetitif di pasar dan berikan insentif tambahan.
+3. **Perkuat Retensi Karyawan Baru**:
+   - Implementasikan program onboarding dan mentoring untuk karyawan dengan masa kerja pendek.
+4. **Gunakan Model Prediktif**:
+   - Integrasikan model XGBoost untuk memonitor risiko secara real-time melalui dashboard HR.
