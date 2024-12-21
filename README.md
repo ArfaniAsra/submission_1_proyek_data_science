@@ -42,6 +42,13 @@ Hasil dari analisis dan model prediktif dapat divisualisasikan dalam bentuk dash
 3. **Prediksi Risiko**:
    - Menampilkan daftar karyawan dengan risiko tinggi berdasarkan hasil prediksi model XGBoost.
 
+ ### Tutorial Mengakses Dashboard
+ **Menggunakan Metabase**
+ 1. Buka aplikasi Metabase di browser Anda (Menggunakan Docker)
+ 2. Username dan Password untuk masuk ke Metabase:
+    username:`root@mail.com`
+    password: `root123`
+
 ## Conclusion
 Proyek ini berhasil mencapai tujuan utama yaitu:
 1. **Mengidentifikasi faktor utama penyebab attrition**:
