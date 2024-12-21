@@ -31,6 +31,31 @@ Proyek ini mencakup:
    - Visualisasi tren dan pola attrition di berbagai departemen, level pekerjaan, dan usia karyawan.
 4. **Pembuatan Business Dashboard**: Visualisasi data dalam bentuk dashboard yang mudah dipahami untuk memantau faktor penyebab attrition.
 5. **Kesimpulan dan Rekomendasi**: Menarik kesimpulan dari hasil analisis dan memberikan rekomendasi praktis untuk mengurangi attrition.
+
+### Persiapan
+**Sumber data**: Dataset yang digunakan dalam proyek ini adalah [Dataset Karyawan Jaya Jaya Maju](https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee) sesuai dengan instruksi dari submission proyek ini.
+**Setup environment**:
+Proyek ini membutuhkan lingkungan sederhana untuk menjalankan analisis data dan dashboard. Berikut langkah-langkah untuk mempersiapkan environment:
+1. Menjalankan `notebook.ipynb`
+   - Pastikan dependensi, packages, library yang dibutuhkan sudah tersedia (lihat file `requirements.txt` untuk melihat dependensi yang dibutuhkan).
+   - Jalankan seluruh isi file `notebook.ipynb` menggunakan Google Colab/Jupyter Notebook untuk melihat hasil analisis data, temuan, dan insight yang diperoleh.
+2. **Menjalankan Dashboard**:
+   Untuk melihat isi dashboard secara langsung, dapat menggunakan **metabase** dengan bantuan Docker (pastikan Docker sudah terinstall).
+   - Jalankan perintah berikut:
+      ```
+      docker pull metabase/metabase:v0.46.4
+      ```
+   - Jalankan container Metabase menggunakan perintah:
+      ```
+      docker run -p 3000:3000 --name metabase metabase/metabase
+      ```
+   - Login ke Metabase menggunakan username dan password berikut:
+      ```
+      username: root@mail.com
+      password: root123
+      ```
+
+
 ---
 
 ## Business Dashboard
